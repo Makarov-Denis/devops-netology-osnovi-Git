@@ -65,80 +65,35 @@ My Love Netology
 Создадим аккаунт в GitLab, если у вас его ещё нет:
 
 1. GitLab. Для [регистрации](https://gitlab.com/users/sign_up)  можно использовать аккаунт Google, GitHub и другие. 
-1. После регистрации или авторизации в GitLab создайте новый проект, нажав на ссылку `Create a projet`. 
+2. После регистрации или авторизации в GitLab создайте новый проект, нажав на ссылку `Create a projet`. 
 Желательно назвать также, как и в GitHub — `devops-netology` и `visibility level`, выбрать `Public`.
-1. Галочку `Initialize repository with a README` лучше не ставить, чтобы не пришлось разрешать конфликты.
-1. Если вы зарегистрировались при помощи аккаунта в другой системе и не указали пароль, то увидите сообщение:
+3. Галочку `Initialize repository with a README` лучше не ставить, чтобы не пришлось разрешать конфликты.
+4. Если вы зарегистрировались при помощи аккаунта в другой системе и не указали пароль, то увидите сообщение:
 `You won't be able to pull or push project code via HTTPS until you set a password on your account`. 
 Тогда перейдите [по ссылке](https://gitlab.com/profile/password/edit) из этого сообщения и задайте пароль. 
 Если вы уже умеете пользоваться SSH-ключами, то воспользуйтесь этой возможностью (подробнее про SSH мы поговорим в следующем учебном блоке).
-1. Перейдите на страницу созданного вами репозитория, URL будет примерно такой:
+5. Перейдите на страницу созданного вами репозитория, URL будет примерно такой:
 https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагаемые варианты для начала работы в репозитории в секции
 `Command line instructions`. 
-1. Запомните вывод команды `git remote -v`.
-1. Из-за того, что это будет наш дополнительный репозиторий, ни один вариант из перечисленных в инструкции (на странице 
+6. Запомните вывод команды `git remote -v`.
+7. Из-за того, что это будет наш дополнительный репозиторий, ни один вариант из перечисленных в инструкции (на странице 
 вновь созданного репозитория) нам не подходит. Поэтому добавляем этот репозиторий, как дополнительный `remote`, к созданному
 репозиторию в рамках предыдущего домашнего задания:
 `git remote add gitlab https://gitlab.com/YOUR_LOGIN/devops-netology.git`.
-1. Отправьте изменения в новый удалённый репозиторий `git push -u gitlab main`.
-1. Обратите внимание, как изменился результат работы команды `git remote -v`.
+8. Отправьте изменения в новый удалённый репозиторий `git push -u gitlab main`.
+9. Обратите внимание, как изменился результат работы команды `git remote -v`.
 
-#### Как изменить видимость репозитория в  GitLab — сделать его публичным 
+### Ответ:
 
-* На верхней панели выберите «Меню» -> «Проекты» и найдите свой проект.
-* На левой боковой панели выберите «Настройки» -> «Основные».
-* Разверните раздел «Видимость» -> «Функции проекта» -> «Разрешения».
-* Измените видимость проекта на Public.
-* Нажмите «Сохранить изменения».
+На скриншоте ниже представлен проект в Gitlab:
+![проект Gitlab](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/8f7a7e37-654c-4a73-8e29-2669f602fcdb)
 
-### Bitbucket* (задание со звёздочкой) 
+Результат вывода команды `git remote -v` представлено на скриншотах ниже:
 
-Это самостоятельное задание, его выполнение необязательно.
-____
+![repo gitlub](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/7e130ccf-33c0-4805-9df2-6dfc6e07b4e4)
 
-Теперь необходимо проделать всё то же самое с [Bitbucket](https://bitbucket.org/). 
+![main gitlab](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/8df2e86d-84f3-4608-a3fa-1bea967c0513)
 
-1. Обратите внимание, что репозиторий должен быть публичным — отключите галочку `private repository` при создании репозитория.
-1. На вопрос `Include a README?` отвечайте отказом. 
-1. В отличии от GitHub и GitLab в Bitbucket репозиторий должен принадлежать проекту, поэтому во время создания репозитория 
-надо создать и проект, который можно назвать, например, `netology`.
-1. Аналогично GitLab на странице вновь созданного проекта выберите `https`, чтобы получить ссылку, и добавьте этот репозиторий, как 
-`git remote add bitbucket ...`.
-1. Обратите внимание, как изменился результат работы команды `git remote -v`.
-
-Если всё проделано правильно, то результат команды `git remote -v` должен быть следующий:
-
-```bash
-$ git remote -v
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	  https://github.com/andrey-borue/devops-netology.git (fetch)
-origin	  https://github.com/andrey-borue/devops-netology.git (push)
-```
-
-Дополнительно можете добавить удалённые репозитории по `ssh`, тогда результат будет примерно такой:
-
-```bash
-git remote -v
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (fetch)
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (push)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (fetch)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (push)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	git@github.com:andrey-borue/devops-netology.git (fetch)
-origin	git@github.com:andrey-borue/devops-netology.git (push)
-origin-https	https://github.com/andrey-borue/devops-netology.git (fetch)
-origin-https	https://github.com/andrey-borue/devops-netology.git (push)
-```
-
-Выполните push локальной ветки `main` в новые репозитории. 
-
-Подсказка: `git push -u gitlab main`. На этом этапе история коммитов во всех трёх репозиториях должна совпадать. 
 
 ## Задание 2. Теги
 
@@ -146,11 +101,14 @@ origin-https	https://github.com/andrey-borue/devops-netology.git (push)
 исправить её и выложить исправленный код в продакшн. Мы никуда не будем выкладывать код, но пометим некоторые коммиты тегами и создадим от них ветки. 
 
 1. Создайте легковестный тег `v0.0` на HEAD-коммите и запуште его во все три добавленных на предыдущем этапе `upstream`.
-1. Аналогично создайте аннотированный тег `v0.1`.
-1. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
+2. Аналогично создайте аннотированный тег `v0.1`.
+3. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
     * в GitHub — https://github.com/YOUR_ACCOUNT/devops-netology/releases;
+   
+   ![image](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/9f3dcb3c-911a-4d5f-8893-38758bfeee6a)
+
     * в GitLab — https://gitlab.com/YOUR_ACCOUNT/devops-netology/-/tags;
-    * в Bitbucket — список тегов расположен в выпадающем меню веток на отдельной вкладке. 
+   ![image](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/b79b07a8-2c5d-4e3b-bc5b-605ea3aa69a8)
 
 ## Задание 3. Ветки 
 
