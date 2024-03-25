@@ -106,7 +106,7 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 1. Создайте легковестный тег `v0.0` на HEAD-коммите и запуште его во все три добавленных на предыдущем этапе `upstream`.
 2. Аналогично создайте аннотированный тег `v0.1`.
 3. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
-    * в GitHub — https://github.com/YOUR_ACCOUNT/devops-netology/releases;
+    * в GitHub — https:[//github.com/YOUR_ACCOUNT/devops-netology/releases](https://github.com/Makarov-Denis/devops-netology-/tags);
    
    ![image](https://github.com/Makarov-Denis/devops-netology-osnovi-Git1/assets/148921246/9f3dcb3c-911a-4d5f-8893-38758bfeee6a)
 
