@@ -115,14 +115,23 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 Давайте посмотрим, как будет выглядеть история коммитов при создании веток. 
 
 1. Переключитесь обратно на ветку `main`, которая должна быть связана с веткой `main` репозитория на `github`.
-1. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания. 
-1. Выполните `git checkout` по хешу найденного коммита. 
-1. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
-1. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
-1. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network. 
+2. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания. 
+3. Выполните `git checkout` по хешу найденного коммита. 
+4. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
+5. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
+6. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network.
+
+![ветка fix](https://github.com/Makarov-Denis/devops-netology-osnovi-Git/assets/148921246/1de436a4-88b5-4efe-900d-9a1b8d929876)
+
 1. Теперь измените содержание файла `README.md`, добавив новую строчку.
-1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
+2. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network
+
+![ветка fix изм](https://github.com/Makarov-Denis/devops-netology-osnovi-Git/assets/148921246/c78ede62-0f27-4bdc-8450-f7838a297eb5)
+
 и как изменится вывод команды `git log`.
+
+![git log fix](https://github.com/Makarov-Denis/devops-netology-osnovi-Git/assets/148921246/9abf2d48-7821-4aa8-9ee9-d17716f91588)
+
 
 ## Задание 4. Упрощаем себе жизнь
 
