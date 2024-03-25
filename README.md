@@ -20,3 +20,4 @@ _override.tf.json игнорировать файлы, имена которых
 myDir/
 !myDir/myFile.txt
 Hello Netology
+My Love Netology
